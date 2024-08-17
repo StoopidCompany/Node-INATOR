@@ -24,7 +24,7 @@ jobs:
           node-version: 20
 
       - id: release
-        name: Release NPM module to GitHub
+        name: Release tag to GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
         run: npx semantic-release
