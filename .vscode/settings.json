@@ -1,0 +1,25 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [120],
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.tabSize": 2,
+    "[json]": {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true
+    },
+    "[jsonc]": {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.insertFinalNewline": true
+}
