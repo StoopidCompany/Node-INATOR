@@ -1,0 +1,23 @@
+name: Stoopid Node-INATOR
+description: Sets up some stuff for Node stuff.
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: Cache NPM
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-nodeinator-${{ inputs.node-version }}
+    - name: Install Utilities
+      shell: bash
+      run: |
+        npm i -g pnpm @redocly/cli semantic-release @semantic-release/git @semantic-release/changelog @semantic-release/npm conventional-changelog-conventionalcommits
+inputs:
+  node-version:
+    description: "Node.js version"
+    required: true
+    default: "20"
